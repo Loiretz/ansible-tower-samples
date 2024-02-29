@@ -1,10 +1,10 @@
 ---
 - name: Ping Sample
-  hosts: localhost
+  hosts: all
   connection: local
   tasks:
   - name: ping
-    shell: ping -c 1 -w 2 8.8.8.8
+    ansible.builtin.ping:
     ignore_errors: true
     register: out
   - debug: var=out.stdout_lines
