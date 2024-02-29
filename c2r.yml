@@ -5,9 +5,9 @@
   become: true
   tasks:
   - name: Checa IP
-  - debug: "{{ ansible_hostname }}:{{ ansible_default_ipv4_address }}"
+    debug: "{{ ansible_hostname }}:{{ ansible_default_ipv4_address }}"
   - name: Checa OS
-  - debug:
+    debug:
       msg:
       - "ansible_distribution {{ hostvars[inventory_hostname].ansible_distribution }}"
       - "major version {{ hostvars[inventory_hostname].ansible_distribution_major_version }}"
