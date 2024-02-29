@@ -5,7 +5,7 @@
   tasks:
   - name: ping
     ansible.netcommon.net_ping:
-    dest: 192.168.0.94
+      dest: 192.168.0.94
     ignore_errors: true
     register: out
   - debug: var=out.stdout_lines
