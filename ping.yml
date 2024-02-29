@@ -8,4 +8,5 @@
       dest: 192.168.0.94
     ignore_errors: true
     register: out
+  - name: show output  
     debug: var=out.stdout_lines
