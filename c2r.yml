@@ -5,7 +5,8 @@
   become: true
   tasks:
   - name: Checa IP
-    debug: "{{ ansible_hostname }}:{{ ansible_default_ipv4_address }}"
+    debug: 
+      msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4_address }}"
   - name: Checa OS
     debug:
       msg:
