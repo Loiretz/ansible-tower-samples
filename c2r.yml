@@ -4,9 +4,6 @@
   gather_facts: true
   become: true
   tasks:
-  - name: Checa IP
-    debug: 
-      msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4.address }}"
   - name: Checa OS
     debug:
       msg:
