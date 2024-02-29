@@ -1,15 +1,8 @@
 ---
-- name: C2RHEL
+- name: Get IP Address with Ansible
   hosts: all
-  gather_facts: true
-  become: true
+  gather_facts: yes
   tasks:
-  - name: Checa IP
-    debug: 
-      msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4_address }}"
-  - name: Checa OS
-    debug:
-      msg:
-      - "ansible_distribution {{ hostvars[inventory_hostname].ansible_distribution }}"
-      - "major version {{ hostvars[inventory_hostname].ansible_distribution_major_version }}"
-      - "version {{ hostvars[inventory_hostname].ansible_distribution_version }}"
+    - name: Display IP Address
+      debug:
+        var: ansible_default_ipv4.address
