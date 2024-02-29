@@ -1,6 +1,6 @@
 ---
 - name: C2RHEL
-  hosts: convert2rhel
+  hosts: all
   gather_facts: true
   become: true
   tasks:
