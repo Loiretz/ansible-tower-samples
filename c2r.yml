@@ -2,7 +2,7 @@
 - name: C2RHEL
   hosts: all
   gather_facts: true
-  become: true
+  become: false
   tasks:
   - name: Checa OS
     debug:
